@@ -1,47 +1,44 @@
 <template>
-  <v-app-bar scroll-behavior="hide" color="primary" density="compact" dark>
-    <!-- Logo or Brand Name -->
-    <v-app-bar-title>My App</v-app-bar-title>
+  <v-app-bar scroll-behavior="hide" color="#FFF999" density="prominent" dark>
 
-    <!-- Spacer for aligning the menu on the right -->
-    <v-spacer></v-spacer>
+    <!-- Logo or Brand Name 
+        <v-app-bar-title>My App</v-app-bar-title>
+    -->
+    <v-row>
+      <v-col cols="2">
+      <div class="d-flex align-center">
+        <v-img src="@/assets/logo.png" class="ma-10" alt="Logo" max-height="50" max-width="50"></v-img>
+      </div>
+      </v-col>
+      <v-col cols="8">
+      <div class="justify-center items-center" style="flex: 1;">
+        <div class="justify-center items-center" style="display: flex; justify-content: center; align-items: center;">
+        <h1 class="py-6 tektur-400">Welcome!</h1>
+        </div>
+        <div class="justify-center items-center tektur-400" style="display: flex; justify-content: center; align-items: center;">
+        <v-btn text to="/">Home</v-btn>
+        <v-btn text to="/about">About</v-btn>
+        <v-btn text to="/contact">Contact</v-btn>
+        </div>
+      </div>
+      </v-col>
+    </v-row>
 
-    <!-- Desktop Menu -->
-    <div class="d-none d-md-flex justify-center items-center">
-      <v-btn text to="/">Home</v-btn>
-      <v-btn text to="/about">About</v-btn>
-      <v-btn text to="/contact">Contact</v-btn>
-    </div>
-
-
-    <!-- Mobile Menu -->
-    <v-app-bar-nav-icon class="d-md-none" @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-    <!-- Navigation Drawer for Mobile -->
-    <v-navigation-drawer v-model="drawer" app temporary>
-      <v-list>
-        <v-list-item-group>
-          <v-list-item>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title @click="$router.push('/about')">About</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title>Contact</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-  </v-app-bar>
+          </v-app-bar>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      drawer: false, // For toggling the mobile navigation drawer
-    };
-  },
-};
+<script setup>
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+.tektur-400 {
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+</style>

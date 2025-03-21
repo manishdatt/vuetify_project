@@ -2,11 +2,12 @@
   <v-app>
     <v-main>
       <Navbar />
-      <router-view />
+        <router-view />
       <Footer />
     </v-main>
   </v-app>
 </template>
 
 <script>
+
 </script>

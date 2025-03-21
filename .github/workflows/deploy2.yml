@@ -1,4 +1,4 @@
-Deploy Vuetify to GitHub Pages
+name: Deploy Vuetify to GitHub Pages
 
 on:
   push:
